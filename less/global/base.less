@@ -1,0 +1,286 @@
+body {
+   font-family: 'Roboto', "Arial", sans-serif;
+   background-color: #fff;
+   color: #000000;
+   position: relative;
+   max-width: 100%;
+   overflow-x: hidden;
+}
+
+html {
+   overflow-x: hidden;
+}
+
+h1 {
+   font-size: 50px;
+   line-height: 50px;
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+   margin: 0;
+}
+
+h2 {
+   font-size: 43px;
+   line-height: 50px;
+   color: #3B363C;
+   font-weight: bold;
+   margin: 0;
+}
+
+h3 {
+   font-size: 30px;
+   margin: 0;
+   font-weight: 300;
+   line-height: 35px;
+   color: #3B363C;
+}
+
+h4 {
+   font-weight: normal;
+   font-size: 19px;
+   line-height: 25px;
+   color: #3B363C;
+   margin: 0;
+}
+
+.sroll-top{
+   display: none;
+}
+
+p {
+   font-size: 14px;
+   line-height: 21px;
+}
+
+.description-item__text {
+   font-weight: lighter;
+}
+
+a {
+   text-decoration: none;
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   transition: .3s;
+   color: #FFF;
+   border-bottom: 1px solid rgba(255, 255, 255, .2);
+   &:hover {
+      border-bottom: 1px solid @yellow;
+      color: @yellow;
+   }
+}
+
+.yellow-color {
+   color: @yellow;
+}
+
+.blackout {
+   position: relative;
+   &:before {
+      background: rgba(92, 92, 80, 0.6);
+      width: 63%;
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      bottom: 0;
+   }
+   &:after {
+      background: #3B363C;
+      width: 37%;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      bottom: 0;
+   }
+}
+
+.title-line {
+   position: relative;
+   &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 0;
+      width: 100px;
+      height: 2px;
+      background-color: #eae440;
+      left: 0;
+   }
+}
+
+.smal-title-line {
+   position: relative;
+   &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 0;
+      width: 30px;
+      height: 2px;
+      background-color: #eae440;
+      left: 0;
+   }
+}
+
+.long-title-line {
+   position: relative;
+   &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 0;
+      width: 200px;
+      height: 2px;
+      background-color: #eae440;
+      left: 0;
+   }
+}
+
+.btn {
+   font-size: 14px;
+   line-height: 21px;
+   font-weight: bold;
+   color: #000;
+   padding: 6px 35px 8px 35px;
+   background-color: #F3F0A2;
+   border: none;
+   transition: .3s;
+   white-space: nowrap;
+   &:hover {
+      background-color: #e4e195;
+   }
+}
+
+.grey-rect {
+   position: relative;
+   z-index: 5;
+   &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 262px;
+      height: 135px;
+      border: 12px solid rgba(0, 0, 0, .03);
+      top: -24px;
+      left: 112px;
+      z-index: -1;
+   }
+   &--dark-bg {
+      &:before {
+         border: 12px solid rgba(255, 255, 255, 0.05);
+      }
+   }
+}
+
+.yellow-square {
+   position: relative;
+   &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 96px;
+      height: 100px;
+      top: 60px;
+      left: -96px;
+      background-color: #eae440;
+   }
+}
+
+.galery-overlay {
+   position: absolute;
+   display: block;
+   content: '';
+   top: 0;
+   left: 0;
+   background-color: @yellow;
+   opacity: 0;
+   width: 80%;
+   height: 80%;
+   margin: 10%;
+   transition: .3s;
+   &:hover {
+      opacity: .8;
+   }
+   &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 20%;
+      height: 20%;
+      background-image: url("../img/icons/eye.svg");
+      background-size: 100% 100%;
+      top: 38%;
+      left: 38%;
+   }
+}
+
+@media @mobile-widths-only {
+   h2 {
+      font-size: 25px;
+      line-height: 33px;
+   }
+
+   h3 {
+      font-size: 18px;
+      line-height: 24px;
+   }
+
+   h4 {
+      font-size: 14px;
+      line-height: 21px;
+   }
+
+   .grey-rect {
+      &:before {
+         display: block;
+         width: 230px;
+         height: auto;
+         border: 5px solid rgba(0, 0, 0, .03);
+         top: -8px;
+         left: 37px;
+         bottom: -10px;
+      }
+   }
+
+   .btn {
+      font-size: 12px;
+      text-transform: uppercase;
+   }
+
+   .yellow-square {
+      &:before {
+         width: 33px;
+         height: 33px;
+         top: -16px;
+         left: 30px;
+      }
+   }
+
+   .title-line {
+      position: relative;
+      &:before {
+         position: absolute;
+         content: '';
+         display: block;
+         bottom: 0;
+         width: 85px;
+         height: 2px;
+         background-color: #eae440;
+         left: 0;
+      }
+   }
+}

@@ -1,0 +1,115 @@
+.receive-second {
+   background-image: url(../img/bg-2.jpg);
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: cover;
+   background-color: #3B363C;
+   padding-top: 100px;
+   position: relative;
+   &:after {
+      content: 'ОБУЧИМ ПОМОЖЕМ';
+      display: block;
+      position: absolute;
+      top: 0;
+      padding-top: 175px;
+      font-size: 124px;
+      line-height: 149px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .05);
+      margin-left: -50px;
+      padding-right: 50px;
+   }
+   &__wrapper {
+      z-index: 5;
+      max-width: 946px;
+      margin: auto;
+      background-color: #fff;
+      padding-top: 60px;
+      &:after {
+         display: block;
+         content: '2';
+         position: absolute;
+         font-size: 40px;
+         line-height: 25px;
+         color: #000;
+         left: -58px;
+         top: 100px;
+         font-weight: bold;
+      }
+   }
+   &__title {
+      max-width: 705px;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      margin-left: 60px;
+   }
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 60px;
+   }
+   &__item {
+      width: 40%;
+      padding-right: 60px;
+      padding-bottom: 46px;
+      & h4 {
+         padding-bottom: 7px;
+         margin-bottom: 10px;
+         font-size: 19px;
+         line-height: 23px;
+      }
+   }
+}
+
+@media @mobile-widths-only {
+   .receive-second {
+      padding-top: 30px;
+      &:after {
+         content: '';
+      }
+      &__wrapper {
+         max-width: 90%;
+         padding-top: 0;
+         &::after {
+            top: -13px;
+            left: 42px;
+            font-size: 15px;
+         }
+      }
+      &__title {
+         margin: 0;
+         padding: 23px 30px 10px 30px;
+         margin-bottom: 20px;
+         text-align: center;
+         font-size: 18px;
+         line-height: 24px;
+         &:before {
+            left: 50%;
+         }
+      }
+      &__list {
+         margin-left: 0;
+         padding: 0 30px;
+      }
+      &__item {
+         width: 50%;
+         padding-right: 5px;
+         box-sizing: border-box;
+         &:nth-child(2n+2) {
+            padding-right: 0;
+            box-sizing: border-box;
+            padding-left: 5px;
+         }
+         h4 {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            margin-bottom: 30px;
+            &:before {
+               left: 40%;
+            }
+         }
+      }
+   }
+}

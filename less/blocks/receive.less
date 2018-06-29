@@ -1,0 +1,108 @@
+.receive {
+   background-image: url(../img/bg-2.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #3B363C;
+   padding-top: 100px;
+   padding-bottom: 102px;
+   position: relative;
+   &:after {
+      content: 'что вы получаете';
+      display: block;
+      position: absolute;
+      top: 0;
+      padding-top: 175px;
+      font-size: 124px;
+      line-height: 149px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .05);
+      margin-left: -50px;
+      padding-right: 50px;
+   }
+   &__wrapper {
+      display: flex;
+      max-width: 946px;
+      margin: auto;
+      background-color: #fff;
+      z-index: 5;
+      position: relative;
+      padding-left: 60px;
+      padding-top: 60px;
+      padding-bottom: 65px;
+      box-sizing: border-box;
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         background: url(../img/icons/calendar.svg) 50% 50% no-repeat;
+         background-size: cover;
+         width: 30px;
+         height: 30px;
+         top: 95px;
+         left: -62px;
+
+      }
+   }
+   &__content {
+      max-width: 50%;
+   }
+   &__title {
+      max-width: 407px;
+      font-weight: 300;
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+
+   }
+   &__description {
+      font-size: 14px;
+      line-height: 21px;
+      &--strong {
+         font-weight: bold;
+      }
+   }
+   &__btn {
+      margin-top: 51px;
+   }
+}
+@media @mobile-widths-only {
+   .receive{
+      padding-bottom: 20px;
+      &:after{
+         content: "";
+      }
+      &__wrapper{
+         padding: 0;
+         width: 90%;
+         display: flex;
+         flex-wrap: wrap;
+         &:after {
+            background: url(../img/icons/calendar.svg) 50% 50% no-repeat;
+            background-size: auto auto;
+            background-size: cover;
+            width: 15px;
+            height: 15px;
+            top: -8px;
+            left: 39px;
+
+         }
+      }
+      &__title{
+         margin: 30px 50px 0 30px;
+
+         font-size: 18px;
+         line-height: 24px;
+      }
+      &__content {
+         max-width: 100%;
+      }
+      &__description{
+         padding: 0 30px;
+      }
+      &__btn{
+         white-space: pre-wrap;
+         margin: 30px;
+         padding: 10px;
+      }
+   }
+}

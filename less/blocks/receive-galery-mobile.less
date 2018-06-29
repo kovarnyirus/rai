@@ -1,0 +1,31 @@
+.receive-galery-mobile {
+   display: none;
+}
+
+@media @mobile-widths-only {
+   .receive-galery-mobile {
+      display: block;
+      &__list {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      &__item {
+         width: 50%;
+         &:hover{
+            border-bottom:none;
+         }
+         & img{
+            width: 100%;
+         }
+      }
+      &__link{
+         margin-bottom: -5px;
+         display: block;
+         &:hover{
+            border-bottom: none;
+         }
+      }
+   }
+
+}

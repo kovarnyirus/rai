@@ -1,0 +1,25 @@
+@tablet-widths: ~"(min-width: 768px)";
+@desktop-widths: ~"(min-width: 1150px)";
+@mobile-widths-only: ~"(max-width: 767px)";
+
+@yellow: #eae440;
+@yellow-light:#F3F0A2;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

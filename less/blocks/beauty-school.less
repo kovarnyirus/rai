@@ -1,0 +1,48 @@
+.beauty-school {
+   padding-top: 200px;
+   &__wrapper {
+      max-width: 1140px;
+      margin: auto;
+   }
+   &-galery {
+      margin-top: 55px;
+      &__list {
+         display: flex;
+      }
+      &__item {
+         width: 16.6666666%;
+         position: relative;
+      }
+      &__link {
+         border-bottom: none;
+         &:hover {
+            border-bottom: none;
+         }
+      }
+   }
+   &__more-info {
+      text-align: center;
+      margin-top: 31px;
+      display: none;
+   }
+}
+
+.yellow-color--bold {
+   font-weight: bold;
+   color: #C4BE1C;
+}
+
+@media @mobile-widths-only {
+   .beauty-school {
+      padding-top:140px;
+      &-galery {
+         &__list {
+            flex-wrap: wrap;
+         }
+         &__item {
+            width: 33.333333%;
+            margin-bottom: -4px;
+         }
+      }
+   }
+}

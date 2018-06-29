@@ -1,0 +1,128 @@
+.team {
+   background-color: #3B363C;
+   padding-top: 60px;
+   padding-bottom: 32px;
+   padding-left: 100px;
+   &__wrapper {
+      margin: 0 auto;
+      max-width: 1040px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &-content {
+      max-width: 260px;
+      &__title {
+         margin-top: 65px;
+         margin-bottom: 62px;
+         color: #fff;
+      }
+      &__subtitle {
+         color: #fff;
+         padding-bottom: 20px;
+         margin-bottom: 89px;
+      }
+   }
+   .btn--team {
+      display: none;
+   }
+   &-gallery {
+      &__list {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         padding: 0;
+         max-width: 660px;
+         z-index: 5;
+         position: relative;
+      }
+      &__item {
+         margin-bottom: 26px;
+         position: relative;
+         text-align: center;
+         &:hover .team-gallery__item-overlay {
+            opacity: 1;
+         }
+         &-overlay {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            margin: 10%;
+            background-color: rgba(227, 220, 25, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .3s;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+         }
+      }
+      &__name {
+         padding-bottom: 5px;
+         border-bottom: 1px solid rgba(60, 55, 61, 0.3);
+         color: #3B363C;
+         font-weight: bold;
+         font-size: 16px;
+         line-height: 21px;
+         width: 70%;
+      }
+      &__post {
+         width: 70%;
+         color: #3B363C;
+         font-size: 14px;
+         line-height: 21px;
+      }
+      &__link {
+         border-bottom: none;
+         &:hover {
+            border-bottom: none;
+         }
+      }
+   }
+}
+
+@media @mobile-widths-only {
+   .team {
+      padding: 0;
+      &__wrapper {
+         flex-wrap: wrap;
+      }
+      &-content {
+         width: 90%;
+         margin: auto;
+         &__subtitle {
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 30px;
+         }
+      }
+      & .btn {
+         display: none;
+      }
+      &-gallery {
+         &__list {
+            margin-bottom: 30px;
+         }
+         &__item {
+            width: 33.333%;
+            margin-bottom: -4px;
+         }
+      }
+   }
+
+   .long-title-line {
+      &:before {
+         width: 100px;
+         left: 30%;
+      }
+   }
+
+   .team .btn--team {
+      display: block;
+      margin: auto;
+      margin-bottom: 40px;
+
+   }
+}

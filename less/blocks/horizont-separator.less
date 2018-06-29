@@ -1,0 +1,44 @@
+.horizont-separator {
+   overflow-x: hidden;
+   &__text {
+      text-align: center;
+      color: #B7B7B7;
+      padding-top: 78px;
+      padding-bottom: 86px;
+      font-size: 14px;
+      line-height: 21px;
+      position: relative;
+      width: 150px;
+      margin: 0 auto;
+      &:before {
+         position: absolute;
+         display: block;
+         content: '';
+         width: 600%;
+         height: 2px;
+         background-color: #B7B7B7;
+         top: 48%;
+         left: -600%;
+         opacity: .3;
+      }
+      &:after {
+         position: absolute;
+         display: block;
+         content: '';
+         width: 600%;
+         height: 2px;
+         background-color: #B7B7B7;
+         top: 48%;
+         right: -600%;
+         opacity: .3;
+      }
+   }
+}
+
+@media @mobile-widths-only {
+   .horizont-separator {
+      &__text {
+         padding: 30px 0;
+      }
+   }
+}

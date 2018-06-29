@@ -1,0 +1,141 @@
+.page-footer {
+   background-color: #3B363C;
+   padding-bottom: 37px;
+   padding-top: 50px;
+   &__wrapper {
+      max-width: 970px;
+      margin: auto;
+      color: rgba(255, 255, 255, .5);
+   }
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(148, 151, 153, 0.17);
+      padding-bottom: 42px;
+   }
+   &__left-column {
+      max-width: 340px;
+      flex-grow: 5;
+   }
+   &-social {
+      max-width: 212px;
+      flex-grow: 1;
+      & ul {
+         flex-direction: row;
+         padding-top: 0;
+         margin-top: 0;
+      }
+      &__title {
+         display: block;
+         font-size: 14px;
+         line-height: 17px;
+         color: #fff;
+         padding-bottom: 8px;
+      }
+      &__subtitle {
+         display: block;
+         font-size: 14px;
+         line-height: 17px;
+         padding-bottom: 14px;
+      }
+   }
+   &-contacts {
+      flex-grow: 1;
+      max-width: 170px;
+      margin-left: 73px;
+      &__title {
+         display: block;
+         color: #fff;
+         padding-bottom: 6px;
+         font-size: 14px;
+         line-height: 17px;
+      }
+      &__item {
+         font-size: 14px;
+         line-height: 21px;
+      }
+   }
+   &__number-salons {
+      font-size: 12px;
+      line-height: 14px;
+      padding-top: 10px;
+   }
+   &__logo {
+     & img{
+         width: 110px;
+      }
+      border-bottom: none;
+      &:hover {
+         border-bottom: none;
+      }
+   }
+   &__bottom {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      & a span {
+         border-bottom: 1px solid rgba(255, 255, 255, .2);
+         &:hover {
+            color: @yellow;
+            transition: .3s;
+            border-bottom: 1px solid #eae440;
+         }
+      }
+   }
+   &__link {
+      border-bottom: none;
+      &:hover {
+         border-bottom: none;
+      }
+   }
+   &__copyright {
+      color: rgba(255, 255, 255, .5);
+   }
+}
+
+@media @mobile-widths-only {
+   .page-footer {
+      &__top {
+         width: 90%;
+         margin: auto;
+      }
+      &__left-column {
+         display: none;
+      }
+      &-contacts {
+         margin-left: 0;
+         box-sizing: border-box;
+         width: 50%;
+         &__item{
+            font-size: 12px;
+         }
+      }
+      &-social {
+         width: 50%;
+         box-sizing: border-box;
+         & ul{
+            width: 103px;
+            justify-content: end;
+            padding-left: 30%;
+         }
+         &__title {
+            display: none;
+         }
+         &__subtitle {
+            display: none;
+         }
+      }
+      &__bottom{
+         max-width: 90%;
+         margin: auto;
+      }
+      &__copyright{
+         font-size: 12px;
+      }
+      &__copyright{
+         font-size: 12px;
+      }
+   }
+}
