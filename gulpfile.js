@@ -31,8 +31,8 @@ gulp.task("style", function () {
             })
         ]))
         .pipe(minify())
-        .pipe(rename("style.min.css"))
         .pipe(sourcemaps.write('.'))
+        .pipe(rename("style.min.css"))
         .pipe(gulp.dest("css"))
         .pipe(server.stream());
 });

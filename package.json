@@ -4,7 +4,6 @@
   "private": true,
   "description": "1111",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
     "browser-sync": "2.18.8",
     "css-mqpacker": "^5.0.1",
