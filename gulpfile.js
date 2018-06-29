@@ -18,7 +18,6 @@ var sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("style", function () {
     gulp.src("less/style.less")
-        .pipe(sourcemaps.init())
         .pipe(plumber()).pipe(less())
         .pipe(postcss([
             autoprefixer({
@@ -31,7 +30,6 @@ gulp.task("style", function () {
             })
         ]))
         .pipe(minify())
-        .pipe(sourcemaps.write('.'))
         .pipe(rename("style.min.css"))
         .pipe(gulp.dest("css"))
         .pipe(server.stream());

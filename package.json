@@ -15,7 +15,6 @@
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.3.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.1",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "run-sequence": "^1.2.2"
@@ -34,6 +33,6 @@
     "less/**/*.less"
   ],
   "engines": {
-    "node": "6.10"
+    "node": "8.11.1"
   }
 }
