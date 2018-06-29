@@ -18,6 +18,7 @@ var sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("style", function () {
     gulp.src("less/style.less")
+        .pipe(sourcemaps.init())
         .pipe(plumber()).pipe(less())
         .pipe(postcss([
             autoprefixer({
@@ -31,6 +32,7 @@ gulp.task("style", function () {
         ]))
         .pipe(minify())
         .pipe(rename("style.min.css"))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("css"))
         .pipe(server.stream());
 });
@@ -75,8 +77,8 @@ gulp.task("serve", ["style"], function () {
 gulp.task("build", function (fn) {
     run(
         "clean",
-        "copy",
         "style",
+        "copy",
         "images",
         "symbols",
         fn);
