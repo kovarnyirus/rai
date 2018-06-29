@@ -14,11 +14,11 @@ var svgmin = require("gulp-svgmin");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
-var sourcemaps = require("gulp-sourcemaps");
+// var sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("style", function () {
     gulp.src("less/style.less")
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(plumber()).pipe(less())
         .pipe(postcss([
             autoprefixer({
@@ -32,7 +32,7 @@ gulp.task("style", function () {
         ]))
         .pipe(minify())
         .pipe(rename("style.min.css"))
-        .pipe(sourcemaps.write('.'))
+        // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("css"))
         .pipe(server.stream());
 });
